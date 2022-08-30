@@ -15,134 +15,135 @@
 <body>
     <header class="header"></header>
     <main class="main">
-        <h1 class="main__title">Рассчитайте стоимость своего MINI онлайн</h1>
+        <form class="main__form" onsubmit="return false">
+            <h1 class="main__title">Рассчитайте стоимость своего MINI онлайн</h1>
 
-        <fieldset>
-            <label for="carModel" class="control-label">Модель автомобиля MINI</label>
-            <select class="form-select" id="carModel">
-                <option selected name="carModel" value="800000">Cabrio</option>
-                <option name="carModel" value="600000">Clubman</option>
-                <option name="carModel" value="800000">Countryman</option>
-                <option name="carModel" value="900000">Coupe</option>
-                <option name="carModel" value="400000">Hatch</option>
-                <option name="carModel" value="1100000">Paceman</option>
-                <option name="carModel" value="1700000">Roadster</option>
-            </select>
-        </fieldset>
+            <fieldset class="main__input">
+                <label for="carModel" class="control-label main__label">Модель автомобиля MINI</label>
+                <select class="form-select" id="carModel">
+                    <option selected name="carModel" value="800000">Cabrio</option>
+                    <option name="carModel" value="600000">Clubman</option>
+                    <option name="carModel" value="800000">Countryman</option>
+                    <option name="carModel" value="900000">Coupe</option>
+                    <option name="carModel" value="400000">Hatch</option>
+                    <option name="carModel" value="1100000">Paceman</option>
+                    <option name="carModel" value="1700000">Roadster</option>
+                </select>
+            </fieldset>
 
-        <fieldset>
-            <label for="" class="control-label">Тип топлива</label>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="engine" id="gasolineEngine" value="100000">
-                <label class="form-check-label" for="gasolineEngine">
-                    Бензин (включая гибрид)
-                </label>
+            <fieldset class="main__input">
+                <label for="" class="control-label main__label">Тип топлива</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="engine" id="gasolineEngine" value="100000">
+                    <label class="form-check-label" for="gasolineEngine">
+                        Бензин (включая гибрид)
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="engine" id="dieselEngine" value="200000">
+                    <label class="form-check-label" for="dieselEngine">
+                        Дизельное топливо
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="engine" id="electricEngine" value="400000">
+                    <label class="form-check-label" for="electricEngine">
+                        Электрический
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset class="main__input">
+                <label for="" class="control-label main__label">Тип привода</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="drive" value="80000" id="rearDrive">
+                    <label class="form-check-label" for="rearDrive">
+                        Задний
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="drive" value="50000" id="forwardDrive">
+                    <label class="form-check-label" for="forwardDrive">
+                        Передний
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="drive" value="150000" id="allWheelDrive">
+                    <label class="form-check-label" for="allWheelDrive">
+                        Полный
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset class="main__input">
+                <label for="ageAuto" class="control-label main__label">Возраст автомобиля</label>
+                <select class="form-select" id="ageAuto">
+                    <option selected name="age" value="1.2">Меньше 3 лет</option>
+                    <option name="age" value="1.1">От 3 до 5 лет</option>
+                    <option name="age" value="1">От 5 до 7 лет</option>
+                    <option name="age" value="0.8">Больше 7 лет</option>
+                </select>
+            </fieldset>
+
+
+            <fieldset id="additional" class="main__input">
+                <label class="control-label main__label">Дополнительные элементы комплектации</label>
+                <div class="form-check">
+                    <input class="form-check-input checkbox" type="checkbox" name="additional" value="8000"
+                        id="parktronic">
+                    <label class="form-check-label" for="parktronic">
+                        Парктроники
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input checkbox" type="checkbox" name="additional" value="20000" id="alarm">
+                    <label class="form-check-label" for="alarm">
+                        Сигнализация
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input checkbox" type="checkbox" name="additional" value="15000"
+                        id="heating">
+                    <label class="form-check-label" for="heating">
+                        Подогрев кресел
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input checkbox" type="checkbox" name="additional" value="30000" id="abs">
+                    <label class="form-check-label" for="abs">
+                        Антиблокировочная система тормозов
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input checkbox" type="checkbox" name="additional" value="50000"
+                        id="conditioner">
+                    <label class="form-check-label" for="conditioner">
+                        Автомобильная система кондиционирования воздуха
+                    </label>
+                </div>
+            </fieldset>
+
+            <div class="form-group main__input">
+                <label for="mileage" class="control-label main__label">Пробег, км</label>
+                <input id="mileage" name="mileage" class="form-control" type="number" value
+                    placeholder="Введите пробег автомобиля">
             </div>
 
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="engine" id="dieselEngine" value="200000">
-                <label class="form-check-label" for="dieselEngine">
-                    Дизельное топливо
-                </label>
-            </div>
+            <!-- <div class="error__message" id="errorMessage"></div> -->
 
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="engine" id="electricEngine" value="400000">
-                <label class="form-check-label" for="electricEngine">
-                    Электрический
-                </label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <label for="" class="control-label">Тип привода</label>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="drive" value="80000" id="rearDrive">
-                <label class="form-check-label" for="rearDrive">
-                    Задний
-                </label>
-            </div>
-
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="drive" value="50000" id="forwardDrive">
-                <label class="form-check-label" for="forwardDrive">
-                    Передний
-                </label>
-            </div>
-
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="drive" value="150000" id="allWheelDrive">
-                <label class="form-check-label" for="allWheelDrive">
-                    Полный
-                </label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <label for="ageAuto" class="control-label">Возраст автомобиля</label>
-            <select class="form-select" id="ageAuto">
-                <option selected name="age" value="1.2">Меньше 3 лет</option>
-                <option name="age" value="1.1">От 3 до 5 лет</option>
-                <option name="age" value="1">От 5 до 7 лет</option>
-                <option name="age" value="0.8">Больше 7 лет</option>
-            </select>
-        </fieldset>
-
-        <div class="form-group">
-            <label for="mileage" class="control-label">Пробег, км</label>
-            <input id="mileage" name="mileage" class="form-control" type="number"
-                placeholder="Введите пробег автомобиля">
-        </div>
-
-        <fieldset id="additional">
-            <label class="control-label">Дополнительные элементы комплектации</label>
-            <div class="form-check">
-                <input class="form-check-input checkbox" type="checkbox" name="additional" value="8000" id="parktronic">
-                <label class="form-check-label" for="parktronic">
-                    Парктроники
-                </label>
-            </div>
-
-            <div class="form-check">
-                <input class="form-check-input checkbox" type="checkbox" name="additional" value="20000" id="alarm">
-                <label class="form-check-label" for="alarm">
-                    Сигнализация
-                </label>
-            </div>
-
-            <div class="form-check">
-                <input class="form-check-input checkbox" type="checkbox" name="additional" value="15000" id="heating">
-                <label class="form-check-label" for="heating">
-                    Подогрев кресел
-                </label>
-            </div>
-
-            <div class="form-check">
-                <input class="form-check-input checkbox" type="checkbox" name="additional" value="30000" id="abs">
-                <label class="form-check-label" for="abs">
-                    Антиблокировочная система тормозов
-                </label>
-            </div>
-
-            <div class="form-check">
-                <input class="form-check-input checkbox" type="checkbox" name="additional" value="50000"
-                    id="conditioner">
-                <label class="form-check-label" for="conditioner">
-                    Автомобильная система кондиционирования воздуха
-                </label>
-            </div>
-        </fieldset>
-
-        <div class="error__message" id="errorMessage"></div>
-
-        <button type="submit" class="btn btn-primary btn-lg" id="calculate">Рассчитать стоимость
-            автомобиля</button>
+            <button type="submit" class="btn btn-warning btn-lg main__button" id="calculate">Рассчитать стоимость
+                автомобиля</button>
         </form>
     </main>
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script> -->
     <script src="assets/script/index.js"></script>
 </body>
 

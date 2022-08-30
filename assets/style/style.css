@@ -1,0 +1,20 @@
+.main {
+    background-color: #F5F5DC;
+    padding: 2%;
+}
+
+.main__form {
+    margin-left: 20%;
+    width: 60%;
+    padding: 2%;
+    background-color: #F5DEB3;
+}
+
+.main__label {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.main__button {
+    margin-top: 2%;
+}
